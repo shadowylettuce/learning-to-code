@@ -1,21 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <metacharset="UTF-8">
-    <meta name ="viewport" content ="width = device-width, initial-scale = 1.0">
-    <title>Chess Opening Reference</title>
-    <link rel="stylesheet" href="style.css"> <!-- Connects css file -->
-</head>
-<body>
-    <h1>Chess Opening Reference</h1>
+<!DOCTYPE html> <!-- I think this is just need for html to work: Tells the browser this is an HTML file -->
+<html lang="en"> <!-- Telling website and code that we are using the english language, and maybe the start of HTML?-->
+<head> <!-- Start of head, I think everything in here will go on the top of the tab -->
+    <metacharset="UTF-8"> <!-- wrong = I think this is the font right = tells the browser which set of characters to support, UTF-8 supports basically every char in every language and emojis-->
+    <meta name ="viewport" content ="width = device-width, initial-scale = 1.0"> <!-- this makes your site work on mobile. Without it, phones would zoom out and show a tiny desktop version. width=device-width means "match the screen width" and initial-scale=1.0 means "don't zoom in or out by default." -->
+    <title>Chess Opening Reference</title> <!-- This is what goes on the tab -->
+    <link rel="stylesheet" href="style.css"> <!-- Q: what is rel = "stlesheet" and what does link do A: <link rel="stylesheet" href="style.css"> — rel="stylesheet" tells the browser what kind of file you're linking to. href is the path to the file. The browser needs both — what it is and where it is.. This line also connects css file -->
+</head> <!-- end of head -->
+<body> <!-- Start of the body, this is kind of like the frame of the website -->
+    <h1>Chess Opening Reference</h1> <!-- Big bold letters saying exactly what the website is about at the top of the page -->
 
-    <div id="color-selector">
-        <button id = "white-btn">Play as White</button>
-        <button id = "black-btn">Play as Black</button>
-    </div>
+    <div id="color-selector"> <!-- A container holding the color selector btns called "color-selector" -->
+        <button id = "white-btn">Play as White</button> <!-- Defining a button called "white-btn" that has "Play as White" inside of it -->
+        <button id = "black-btn">Play as Black</button> <!-- Defining a button called "black-btn" that has "Play as Black" inside of it -->
+    </div> <!-- End of the container -->
 
-    <div id="opening-display"></div>
+    <div id="opening-display"></div> <!-- Start of the box that caused me to crashout yesterday -->
 
-    <script src="script.js"></script> <!-- Connects JS file -->
-</body>
-</html>
+    <script src="script.js"></script> <!-- Connects JS file (this syntax would be hard to remember but thanfully it is used for 99% of websites so always a google search away)-->
+</body> <!-- end of body-->
+</html> <!-- end of the html block Q: If I were to put JS and CSS in one file would I need a <css> and <JS> tag or is tohis for something else-->

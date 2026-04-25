@@ -46,3 +46,9 @@ button:hover {
     background-color: #2a2a2a;
     border-radius: 8px;
 }
+
+#opening-display div {
+    border-bottom: 1px solid #3a3a3a;
+    padding-bottom: 20px;
+    margin-bottom: 20px
+}
