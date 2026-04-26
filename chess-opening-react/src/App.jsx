@@ -1,5 +1,6 @@
 import{ useState } from 'react'
 import './App.css'
+import OpeningCard from './OpeningCard'
 
 const openings = { // Creating an object called openings
     white: [ // The start of the white opening object, where a list is created
@@ -38,22 +39,7 @@ function App() {
         <button id = "white-btn" onClick={()=> setSelectedColor("white")}>Play as White</button>
         <button id = "black-btn" onClick={()=> setSelectedColor("black")}>Play as Black</button>
         {selectedColor && openings[selectedColor].map((opening, index) =>(
-            <div key = {index}>
-                <h2>{opening.name}</h2>
-                <h3>Moves</h3>
-                <ul>
-                    {opening.moves.map((move, index) => (
-                        <li key = {index}>{move}</li>
-                    ))}
-                </ul>
-                <p>{opening.description}</p>
-                <h3>Ideas</h3>
-                <ul>
-                    {opening.ideas.map((ideas, index) => (
-                        <li key = {index}>{ideas}</li>
-                    ))}
-                </ul>
-            </div>
+            <OpeningCard key = {index} opening = {opening} />
         ))}
     </div>
   )
