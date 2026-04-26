@@ -1,4 +1,5 @@
 import{ useState } from 'react'
+import './App.css'
 
 const openings = { // Creating an object called openings
     white: [ // The start of the white opening object, where a list is created
@@ -34,11 +35,29 @@ function App() {
   return (
     <div>
         <h1>Chess Opening Reference</h1>
-        <button onClick={()=> setSelectedColor("white")}>Play as White</button>
-        <button onClick={()=> setSelectedColor("black")}>Play as Black</button>
-        {selectedColor && <p>Showing {selectedColor} openings</p>} 
+        <button id = "white-btn" onClick={()=> setSelectedColor("white")}>Play as White</button>
+        <button id = "black-btn" onClick={()=> setSelectedColor("black")}>Play as Black</button>
+        {selectedColor && openings[selectedColor].map((opening, index) =>(
+            <div key = {index}>
+                <h2>{opening.name}</h2>
+                <h3>Moves</h3>
+                <ul>
+                    {opening.moves.map((move, index) => (
+                        <li key = {index}>{move}</li>
+                    ))}
+                </ul>
+                <p>{opening.description}</p>
+                <h3>Ideas</h3>
+                <ul>
+                    {opening.ideas.map((ideas, index) => (
+                        <li key = {index}>{ideas}</li>
+                    ))}
+                </ul>
+            </div>
+        ))}
     </div>
   )
+  // key {index}: react uses key to identify each item in a list so it knows which one is has changed when it re-renders. Sort of like a name tag for every element
 }
 
 // The selectedColor && tells react to render null if nothing is done, but to render either black or white (in this case) if they are selected
